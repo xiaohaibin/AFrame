@@ -7,12 +7,13 @@ import java.util.Iterator;
 import java.util.Stack;
 
 /**
- * @link https://xiaohaibin.github.io/
- * @email： xhb_199409@163.com
- * @github: https://github.com/xiaohaibin
- * @describe: Activity管理工具类
+ * link https://xiaohaibin.github.io/
+ * email： xhb_199409@163.com
+ * github: https://github.com/xiaohaibin
+ * describe: Activity管理工具类
  */
 public class AppManager {
+
     private static Stack<Activity> activityStack;
     private static AppManager instance;
 
@@ -44,8 +45,9 @@ public class AppManager {
      */
     public Activity currentActivity() {
         Activity activity = null;
-        if (activityStack != null && !activityStack.empty())
+        if (activityStack != null && !activityStack.empty()) {
             activity = activityStack.lastElement();
+        }
         return activity;
     }
 

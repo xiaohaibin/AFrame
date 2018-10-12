@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AFrameLibrary</string>
+    <string name="aToz">abcdefghijklmnopqrstuvwxyz</string>
+    <string name="zeroTonine">1234567890</string>
 </resources>
