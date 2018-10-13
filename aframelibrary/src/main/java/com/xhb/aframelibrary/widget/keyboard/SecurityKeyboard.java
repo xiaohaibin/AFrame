@@ -26,7 +26,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.SizeUtils;
-import com.stx.xiaohaibin.aframelibrary.R;
+import com.xhb.aframelibrary.R;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

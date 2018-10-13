@@ -6,7 +6,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 
-import com.stx.xiaohaibin.aframelibrary.R;
+import com.xhb.aframelibrary.R;
 import com.xhb.aframelibrary.base.BaseDialogFragment;
 
 /**

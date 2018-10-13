@@ -13,7 +13,8 @@ import android.view.animation.Animation;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
-import com.stx.xiaohaibin.aframelibrary.R;
+
+import com.xhb.aframelibrary.R;
 
 
 /**

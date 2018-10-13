@@ -11,7 +11,7 @@ import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
 
-import com.stx.xiaohaibin.aframelibrary.R;
+import com.xhb.aframelibrary.R;
 
 
 /**

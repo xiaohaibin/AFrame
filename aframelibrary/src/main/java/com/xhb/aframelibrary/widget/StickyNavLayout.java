@@ -20,7 +20,7 @@ import android.widget.ListView;
 import android.widget.OverScroller;
 import android.widget.ScrollView;
 
-import com.stx.xiaohaibin.aframelibrary.R;
+import com.xhb.aframelibrary.R;
 
 
 /**

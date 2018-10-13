@@ -12,7 +12,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import com.stx.xiaohaibin.aframelibrary.R;
+
+import com.xhb.aframelibrary.R;
 
 
 /**
