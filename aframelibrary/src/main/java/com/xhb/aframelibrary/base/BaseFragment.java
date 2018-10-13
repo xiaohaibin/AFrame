@@ -1,4 +1,6 @@
-package com.stx.xiaohaibin.aframelibrary.base;
+package com.xhb.aframelibrary.base;
+
+import android.support.v4.app.Fragment;
 
 /**
  * @author: xiaohaibin.
@@ -7,5 +9,5 @@ package com.stx.xiaohaibin.aframelibrary.base;
  * @github:https://github.com/xiaohaibin
  * @describe: BaseFragment
  */
-public abstract class BaseFragment {
+public abstract class BaseFragment extends Fragment {
 }

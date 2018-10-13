@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.base;
+package com.xhb.aframelibrary.base;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -55,6 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         initData(savedInstanceState);
+        initView();
     }
 
     @Override

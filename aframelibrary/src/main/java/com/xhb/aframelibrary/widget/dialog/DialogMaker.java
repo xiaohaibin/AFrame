@@ -1,11 +1,9 @@
-package com.stx.xiaohaibin.aframelibrary.widget.dialog;
+package com.xhb.aframelibrary.widget.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface.OnCancelListener;
 import android.text.TextUtils;
 import android.util.Log;
-
-import java.util.logging.Logger;
 
 
 public class DialogMaker {

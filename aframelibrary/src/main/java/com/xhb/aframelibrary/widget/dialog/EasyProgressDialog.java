@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.widget.dialog;
+package com.xhb.aframelibrary.widget.dialog;
 
 import android.app.Dialog;
 import android.content.Context;

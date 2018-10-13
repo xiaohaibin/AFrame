@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.widget;
+package com.xhb.aframelibrary.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

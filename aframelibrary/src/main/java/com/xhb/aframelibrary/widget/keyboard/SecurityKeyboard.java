@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.widget.keyboard;
+package com.xhb.aframelibrary.widget.keyboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

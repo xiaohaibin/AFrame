@@ -29,7 +29,7 @@ dependencies {
         exclude module: 'support-annotations'
         exclude module: 'support-compat'
     }
-    compileOnly rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["design"]
     api rootProject.ext.dependencies["gson"]
     api rootProject.ext.dependencies["statusbarutil"]
     api rootProject.ext.dependencies["utilcode"]

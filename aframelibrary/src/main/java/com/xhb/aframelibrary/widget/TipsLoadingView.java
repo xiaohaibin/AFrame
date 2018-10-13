@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.widget;
+package com.xhb.aframelibrary.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;

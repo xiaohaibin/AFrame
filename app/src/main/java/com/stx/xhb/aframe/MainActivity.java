@@ -1,15 +1,15 @@
 package com.stx.xhb.aframe;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
-import com.stx.xiaohaibin.aframelibrary.base.BaseActivity;
-import com.stx.xiaohaibin.aframelibrary.widget.dialog.DialogMaker;
+import com.xhb.aframelibrary.base.BaseActivity;
+import com.xhb.aframelibrary.widget.dialog.DialogMaker;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * @author Mr.xiao
+ */
 public class MainActivity extends BaseActivity {
 
     @Override

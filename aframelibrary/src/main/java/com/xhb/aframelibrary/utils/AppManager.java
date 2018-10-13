@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.utils;
+package com.xhb.aframelibrary.utils;
 
 import android.app.Activity;
 import android.content.Context;

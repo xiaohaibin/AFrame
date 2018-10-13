@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.base;
+package com.xhb.aframelibrary.base;
 
 import android.app.Application;
 

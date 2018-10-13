@@ -1,4 +1,4 @@
-package com.stx.xiaohaibin.aframelibrary.widget.dialog;
+package com.xhb.aframelibrary.widget.dialog;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 
 import com.stx.xiaohaibin.aframelibrary.R;
-import com.stx.xiaohaibin.aframelibrary.base.BaseDialogFragment;
+import com.xhb.aframelibrary.base.BaseDialogFragment;
 
 /**
  * @author xiaohaibin.
