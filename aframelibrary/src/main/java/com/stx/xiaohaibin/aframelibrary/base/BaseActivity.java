@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -14,6 +16,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author: xiaohaibin.
@@ -25,10 +30,41 @@ import java.util.List;
 public abstract class BaseActivity extends AppCompatActivity {
 
     private final String TAG = this.getClass().getSimpleName();
-
     private int REQUEST_CODE_PERMISSION = 0x00099;
     //权限申请回调
     private OnPermissionResponseListener onPermissionResponseListener;
+    private Unbinder mUnbinder;
+
+    protected abstract int getLayoutId();
+
+    protected abstract void initData(Bundle bundle);
+
+    protected abstract void initView();
+
+    protected void setListener(){ }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        try {
+            if (getLayoutId() != 0) {
+                setContentView(getLayoutId());
+                mUnbinder = ButterKnife.bind(this);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        initData(savedInstanceState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mUnbinder != null && mUnbinder != Unbinder.EMPTY) {
+            mUnbinder.unbind();
+        }
+        this.mUnbinder = null;
+    }
 
     /**
      * 校验单个权限
@@ -164,7 +200,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public interface OnPermissionResponseListener {
         void onSuccess(String[] permissions);
-
         void onFail();
     }
 

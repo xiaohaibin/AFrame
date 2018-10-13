@@ -7,6 +7,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StyleRes;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
 
@@ -29,10 +30,13 @@ public class EasyProgressDialog extends Dialog {
 
 	public EasyProgressDialog(Context context, @StyleRes int style, @LayoutRes int layout) {
 		super(context, style);
-		LayoutParams params = getWindow().getAttributes();
-		params.width = LayoutParams.MATCH_PARENT;
-		params.height = LayoutParams.MATCH_PARENT;
-		getWindow().setAttributes(params);
+		Window window = getWindow();
+		if (window!=null) {
+			LayoutParams params = window.getAttributes();
+			params.width = LayoutParams.MATCH_PARENT;
+			params.height = LayoutParams.MATCH_PARENT;
+			window.setAttributes(params);
+		}
 		mLayoutId = layout;
 	}
 

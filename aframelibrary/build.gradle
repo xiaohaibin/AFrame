@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
     }
 
     buildTypes {
@@ -18,7 +19,18 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:27.1.0'
-    api 'com.jaeger.statusbarutil:library:1.5.1'
-    api 'com.blankj:utilcode:1.20.4'
+    api(rootProject.ext.dependencies["appcompat-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api(rootProject.ext.dependencies["recyclerview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api(rootProject.ext.dependencies["butterknife"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'support-compat'
+    }
+    compileOnly rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["statusbarutil"]
+    api rootProject.ext.dependencies["utilcode"]
 }

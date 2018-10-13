@@ -53,7 +53,6 @@ public class DialogMaker {
 			} catch (Exception e) {
 				// maybe we catch IllegalArgumentException here.
 			}
-
 		}
 
 	}
