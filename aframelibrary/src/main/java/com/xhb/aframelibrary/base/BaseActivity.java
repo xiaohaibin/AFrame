@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void initData(Bundle bundle);
 
-    protected abstract void initView();
+    protected void initView(){ }
 
     protected void setListener(){ }
 
@@ -56,6 +56,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         initData(savedInstanceState);
         initView();
+        setListener();
     }
 
     @Override
