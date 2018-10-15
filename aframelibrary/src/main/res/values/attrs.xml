@@ -27,4 +27,10 @@
         <attr name="android:color"/>
     </declare-styleable>
     <attr name="LoadingStyle" format="reference"/>
+
+    <declare-styleable name="IconLabelIndicatorView">
+        <attr name="viewIcon" format="reference" />
+        <attr name="viewLabel" format="string" />
+        <attr name="viewIndicator" format="reference" />
+    </declare-styleable>
 </resources>
