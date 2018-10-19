@@ -14,6 +14,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
+import com.blankj.utilcode.util.ScreenUtils;
+import com.jaeger.library.StatusBarUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,9 +57,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        setStatusBar();
         initData(savedInstanceState);
         initView();
         setListener();
+        if (ScreenUtils.isPortrait()) {
+            ScreenUtils.adaptScreen4VerticalSlide(this, 360);
+        } else {
+            ScreenUtils.adaptScreen4HorizontalSlide(this, 360);
+        }
     }
 
     @Override
@@ -66,6 +75,13 @@ public abstract class BaseActivity extends AppCompatActivity {
             mUnbinder.unbind();
         }
         this.mUnbinder = null;
+    }
+
+    /**
+     * 沉浸式状态栏
+     */
+    protected void setStatusBar() {
+        StatusBarUtil.setTransparent(this);
     }
 
     /**

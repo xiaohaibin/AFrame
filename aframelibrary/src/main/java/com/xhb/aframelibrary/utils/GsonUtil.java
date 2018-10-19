@@ -12,10 +12,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /**
- * Author:Tiger
- * <p>
- * CrateTime:2016-12-20 15:49
- * <p>
  * Description:将null转换为空字符串
  */
 public class GsonUtil {

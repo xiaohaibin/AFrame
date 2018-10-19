@@ -1,7 +1,9 @@
 package com.stx.xhb.aframe;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 
+import com.jaeger.library.StatusBarUtil;
 import com.xhb.aframelibrary.base.BaseActivity;
 import com.xhb.aframelibrary.widget.dialog.DialogMaker;
 
@@ -32,4 +34,9 @@ public class MainActivity extends BaseActivity {
         DialogMaker.showProgressDialog(this, "加载中...");
     }
 
+
+    @Override
+    protected void setStatusBar() {
+        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
+    }
 }

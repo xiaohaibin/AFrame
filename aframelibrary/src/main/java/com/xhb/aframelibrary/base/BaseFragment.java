@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author: xiaohaibin.
@@ -19,32 +20,17 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment {
 
-    /**
-     * 是否可见
-     */
+    /** 是否可见 */
     protected boolean isViable = false;
 
-    /**
-     * 标志位，标志Fragment已经初始化完成
-     */
+    /** 标志位，标志Fragment已经初始化完成 */
     protected boolean isPrepared = false;
 
-    /**
-     * 标记已加载完成，保证懒加载只能加载一次
-     */
+    /** 标记已加载完成，保证懒加载只能加载一次 */
     protected boolean hasLoaded = false;
-
-    /**
-     * 当前页码
-     */
-    protected int currentpage = 1;
-
-    /**
-     * 页面数据量
-     */
-    protected int pageSize = 10;
     protected View rootView;
     protected Context mContext = null;
+    private Unbinder mUnbinder;
 
     protected abstract int getLayoutResource();
 
@@ -64,7 +50,7 @@ public abstract class BaseFragment extends Fragment {
         } else {
             rootView = super.onCreateView(inflater, container, savedInstanceState);
         }
-        ButterKnife.bind(this, rootView);
+        mUnbinder = ButterKnife.bind(this, rootView);
         initData(savedInstanceState);
         initView();
         setListener();
@@ -89,6 +75,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (mUnbinder != null && mUnbinder != Unbinder.EMPTY) {
+            mUnbinder.unbind();
+        }
+        mUnbinder = null;
     }
 
     @Override
@@ -100,7 +90,6 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * 在这里实现Fragment数据的缓加载.
-     *
      * @param isVisibleToUser
      */
     @Override
@@ -150,7 +139,6 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * 当前fragment可见状态发生变化时会回调该方法
-     *
      * @param isVisible
      */
     protected void onFragmentVisibleChange(boolean isVisible) {

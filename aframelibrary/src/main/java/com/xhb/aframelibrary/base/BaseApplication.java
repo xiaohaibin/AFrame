@@ -13,9 +13,15 @@ import com.blankj.utilcode.util.Utils;
  */
 public class BaseApplication extends Application {
 
+    private static BaseApplication ourInstance;
+
+    public static BaseApplication getInstance() {
+        return ourInstance;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
+        ourInstance=this;
         Utils.init(this);
     }
 }

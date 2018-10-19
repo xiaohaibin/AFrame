@@ -30,6 +30,7 @@ public class EasyProgressDialog extends Dialog {
 
 	public EasyProgressDialog(Context context, @StyleRes int style, @LayoutRes int layout) {
 		super(context, style);
+		mLayoutId = layout;
 		Window window = getWindow();
 		if (window!=null) {
 			LayoutParams params = window.getAttributes();
@@ -37,7 +38,6 @@ public class EasyProgressDialog extends Dialog {
 			params.height = LayoutParams.MATCH_PARENT;
 			window.setAttributes(params);
 		}
-		mLayoutId = layout;
 	}
 
 	public EasyProgressDialog(Context context, @LayoutRes int layout, String msg) {
