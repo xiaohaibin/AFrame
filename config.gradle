@@ -50,6 +50,7 @@ ext {
             "photoview"               : "com.github.chrisbanes.photoview:library:1.2.3",
             "xbanner"                 : "com.xhb:xbanner:1.4.7",
             "commontitlebar"          : "com.xhb:commontitlebar:2.1.0",
+            "BRVAH"          : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40",
 
             //rx1
             "rxandroid"               : "io.reactivex:rxandroid:1.2.1",
