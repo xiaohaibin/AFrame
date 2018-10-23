@@ -1,11 +1,11 @@
 package com.stx.xhb.aframe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 
 import com.jaeger.library.StatusBarUtil;
 import com.xhb.aframelibrary.base.BaseActivity;
-import com.xhb.aframelibrary.widget.dialog.DialogMaker;
 
 import butterknife.OnClick;
 
@@ -31,7 +31,8 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn)
     public void onViewClicked() {
-        DialogMaker.showProgressDialog(this, "加载中...");
+//        DialogMaker.showProgressDialog(this, "加载中...");
+        startActivity(new Intent(this,TranscetActivity.class));
     }
 
 
