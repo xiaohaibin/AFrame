@@ -33,4 +33,12 @@
         <attr name="viewLabel" format="string" />
         <attr name="viewIndicator" format="reference" />
     </declare-styleable>
+
+    <!--圆点指示器控件-->
+    <declare-styleable name="IndicatorView">
+        <attr name="indicatorColor" format="color" />
+        <attr name="indicatorColorSelected" format="color" />
+        <attr name="indicatorWidth" format="integer" />
+        <attr name="gravity" format="integer" />
+    </declare-styleable>
 </resources>
