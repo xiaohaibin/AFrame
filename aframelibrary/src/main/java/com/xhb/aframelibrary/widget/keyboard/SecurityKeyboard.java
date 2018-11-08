@@ -20,6 +20,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -67,7 +68,7 @@ public class SecurityKeyboard extends PopupWindow {
     private View mMainView;
     private ArrayList<String> nums_ = new ArrayList<>();
 
-    private SecurityEditText curEditText;
+    private EditText curEditText;
 
     private RelativeLayout keyboardViewLy;
     private SecurityConfigure configuration;
@@ -192,13 +193,13 @@ public class SecurityKeyboard extends PopupWindow {
         List<View> children = getAllChildren(parentLayout);
         for (int i = 0; i < children.size(); i++) {
             View view = children.get(i);
-            if (view instanceof SecurityEditText) {
-                SecurityEditText securityEditText = (SecurityEditText) view;
+            if (view instanceof EditText) {
+                EditText securityEditText = (EditText) view;
                 securityEditText.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
                         if (event.getAction() == MotionEvent.ACTION_UP) {
-                            curEditText = (SecurityEditText) v;
+                            curEditText = (EditText) v;
                             curEditText.requestFocus();
                             //curEditText.setInputType(InputType.TYPE_NULL);
                             //将光标移到文本最后

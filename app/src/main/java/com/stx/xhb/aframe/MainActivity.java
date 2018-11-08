@@ -2,12 +2,9 @@ package com.stx.xhb.aframe;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 
-import com.jaeger.library.StatusBarUtil;
 import com.xhb.aframelibrary.base.BaseActivity;
 
-import butterknife.OnClick;
 
 /**
  * @author Mr.xiao
@@ -36,8 +33,8 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void setStatusBar() {
-        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
-    }
+//    @Override
+//    protected void setStatusBar() {
+//        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
+//    }
 }
