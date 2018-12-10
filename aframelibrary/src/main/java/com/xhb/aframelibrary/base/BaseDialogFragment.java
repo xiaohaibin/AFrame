@@ -1,5 +1,6 @@
 package com.xhb.aframelibrary.base;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -111,6 +112,25 @@ public abstract class BaseDialogFragment extends DialogFragment {
 
     public void show(FragmentManager fragmentManager) {
         show(fragmentManager, getFragmentTag());
+    }
+
+
+    public interface onDismissListener {
+        void onDismiss();
+    }
+
+    public onDismissListener mOnDismissListener;
+
+    public void setOnDismissListener(onDismissListener onDismissListener) {
+        mOnDismissListener = onDismissListener;
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (mOnDismissListener!=null){
+            mOnDismissListener.onDismiss();
+        }
     }
 
 }
