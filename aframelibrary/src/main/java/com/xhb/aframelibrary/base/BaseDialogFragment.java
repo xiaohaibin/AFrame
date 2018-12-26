@@ -133,5 +133,16 @@ public abstract class BaseDialogFragment extends DialogFragment {
         }
     }
 
+    /**
+     * 判断对话框是否显示
+     * @return
+     */
+    public boolean isShow() {
+        if (getDialog() != null) {
+            return getDialog().isShowing();
+        }
+        return false;
+    }
+
 }
 

@@ -30,6 +30,7 @@ dependencies {
         exclude module: 'support-compat'
     }
     api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["picasso"]
     api rootProject.ext.dependencies["gson"]
     api rootProject.ext.dependencies["statusbarutil"]
     api rootProject.ext.dependencies["utilcode"]
