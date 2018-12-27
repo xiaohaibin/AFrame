@@ -72,7 +72,12 @@ public class RxImage {
         }).subscribeOn(Schedulers.io());
     }
 
-
+    /**
+     * 设置壁纸
+     * @param context
+     * @param url
+     * @return
+     */
     public static Observable<Boolean> setWallPaper(final Context context, final String url) {
         return Observable.create(new Observable.OnSubscribe<Bitmap>() {
             @Override
