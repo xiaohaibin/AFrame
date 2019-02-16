@@ -2,8 +2,13 @@ package com.stx.xhb.aframe;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.xhb.aframelibrary.base.BaseActivity;
+import com.xhb.aframelibrary.utils.AESUtil;
+
+import butterknife.OnClick;
 
 
 /**
@@ -18,7 +23,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData(Bundle bundle) {
-
+        String helloWorld = AESUtil.encrypt("{hello world}");
+        Log.i("==encrypt",helloWorld);
+        String decrypt = AESUtil.decrypt(helloWorld);
+        Log.i("==decrypt",decrypt);
     }
 
     @Override
