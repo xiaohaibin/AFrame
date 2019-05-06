@@ -31,9 +31,8 @@ import butterknife.Unbinder;
  * @describe: BaseActivity
  */
 public abstract class BaseActivity extends AppCompatActivity {
-
     private final String TAG = this.getClass().getSimpleName();
-    private int REQUEST_CODE_PERMISSION = 0x00099;
+    private final int REQUEST_CODE_PERMISSION = 0x00099;
     //权限申请回调
     private OnPermissionResponseListener onPermissionResponseListener;
     private Unbinder mUnbinder;
@@ -42,9 +41,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void initData(Bundle bundle);
 
-    protected void initView(){ }
+    protected void initView() {
+    }
 
-    protected void setListener(){ }
+    protected void setListener() {
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -101,7 +102,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param permissions                  请求的权限
      * @param onPermissionResponseListener 回调监听器
      */
-    public void requestPermission(OnPermissionResponseListener onPermissionResponseListener,String... permissions) {
+    public void requestPermission(OnPermissionResponseListener onPermissionResponseListener, String... permissions) {
         this.onPermissionResponseListener = onPermissionResponseListener;
         if (checkPermissions(permissions)) {
             if (onPermissionResponseListener != null) {
@@ -218,6 +219,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public interface OnPermissionResponseListener {
         void onSuccess(String[] permissions);
+
         void onFail();
     }
 

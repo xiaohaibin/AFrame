@@ -57,22 +57,30 @@ public class AESUtil {
         return cipher.doFinal(data);
     }
 
-    public static String encrypt(String data) {
+    public static String encrypt(String data, String pwd) {
         try {
-            return parseByte2HexStr(encrypt(data.getBytes(), S_KEY.getBytes()));
+            return parseByte2HexStr(encrypt(data.getBytes(), pwd.getBytes()));
         } catch (Exception e) {
             e.printStackTrace();
             return data;
         }
     }
 
-    public static String decrypt(String data) {
+    public static String decrypt(String data, String pwd) {
         try {
-            return new String(decrypt(parseHexStr2Byte(data), S_KEY.getBytes()));
+            return new String(decrypt(parseHexStr2Byte(data), pwd.getBytes()));
         } catch (Exception e) {
             e.printStackTrace();
             return data;
         }
+    }
+
+    public static String encrypt(String data) {
+        return encrypt(data, S_KEY);
+    }
+
+    public static String decrypt(String data) {
+        return decrypt(data, S_KEY);
     }
 
     /**
