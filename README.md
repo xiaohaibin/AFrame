@@ -7,7 +7,7 @@ Android 快速开发框架，提升开发效率，不断完善中~~~~~
 
 ## 基本使用
 
-#### 1.添加 Gradle （以前是有的是Jecenter方式引入，由于国内被墙了，切换成JitPack方式引入，使用方式不变）
+#### 1.添加 Gradle
 
 ## Jitpack
 
@@ -24,7 +24,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-   implementation 'com.github.xiaohaibin:AFrame:latestVersion'//将latestVersion替换成上面 jitpack 后面的版本号
+   implementation 'com.github.xiaohaibin:AFrame:v0.1.0'
 }
 ```
 
