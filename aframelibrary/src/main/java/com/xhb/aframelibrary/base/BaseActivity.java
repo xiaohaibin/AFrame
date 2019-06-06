@@ -62,11 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         initData(savedInstanceState);
         initView();
         setListener();
-        if (ScreenUtils.isPortrait()) {
-            ScreenUtils.adaptScreen4VerticalSlide(this, 360);
-        } else {
-            ScreenUtils.adaptScreen4HorizontalSlide(this, 360);
-        }
     }
 
     @Override
